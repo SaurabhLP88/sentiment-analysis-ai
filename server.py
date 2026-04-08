@@ -2,6 +2,7 @@
     analysis to be executed over the Flask channel and deployed on
     localhost:5000.
 '''
+from flask_cors import CORS
 from flask import Flask, render_template, request
 from SentimentAnalysis.sentiment_analysis import sentiment_analyzer
 
@@ -29,6 +30,9 @@ def sent_analyzer():
 @app.route("/")
 def render_index_page():
     return render_template('index.html')
+
+app = Flask(__name__)
+CORS(app, resources={r"/*": {"origins": "*"}})
 
 if __name__ == "__main__":
     import os
