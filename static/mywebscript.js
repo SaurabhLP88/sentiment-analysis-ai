@@ -19,13 +19,7 @@ let RunSentimentAnalysis = () => {
         }
     };
 
-    // xhttp.open("GET", "sentimentAnalyzer?textToAnalyze=" + encodeURIComponent(textToAnalyze), true);
-
-    xhttp.open(
-        "GET",
-        "https://sentiment-analysis-ai-ntml.onrender.com/sentimentAnalyzer?textToAnalyze=" + encodeURIComponent(textToAnalyze),
-        true
-    );
+    xhttp.open("GET", "sentimentAnalyzer?textToAnalyze=" + encodeURIComponent(textToAnalyze), true);
 
     xhttp.send();
 };
