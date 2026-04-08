@@ -62,7 +62,7 @@ flask_project_one/
 
 ### 1. Clone the repository
 ```bash
-git clone https://github.com/your-username/flask-transaction-app.git
+git clone https://github.com/SaurabhLP88/sentiment-analysis-ai.git
 cd flask_project_one
 ```
 
@@ -92,7 +92,7 @@ python server.py
 
 Open in browser:
 ```
-http://localhost:5000
+http://127.0.0.1:5000/
 ```
 
 ---
