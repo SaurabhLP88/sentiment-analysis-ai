@@ -1,10 +1,15 @@
 import requests
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 
 def sentiment_analyzer(text_to_analyse):
     try:
         url = "https://router.huggingface.co/hf-inference/models/cardiffnlp/twitter-roberta-base-sentiment"
         headers = {
-            "Authorization": "Bearer REMOVED"
+            #"Authorization": "Bearer REMOVED"
+            "Authorization": f"Bearer {os.getenv('HF_TOKEN')}"
         }
 
         response = requests.post(
